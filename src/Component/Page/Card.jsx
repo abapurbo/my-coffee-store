@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom';
 
 const Card = ({ coffee }) => {
-    const {id, image, name, popularity, rating, origin, type, category } = coffee 
-    console.log(coffee)
-    
+    const { id, image, name, popularity, rating, origin, type, category } = coffee || {}
+    // const navigate=useNavigate()
+
 
     return (
         <div>
-            {/* <Link to={'/co'}>coo</Link> */}
-            <Link to={`coffee/${id}`}>   
+           
+            <Link to={`/details/${id}`}>
                 <div className="card transition hover:scale-105 bg-base-100 w-96 shadow-sm">
                     <figure>
                         <img className="h-[230px] w-full bg-center object-center" src={image} alt="Shoes" />
@@ -23,7 +23,12 @@ const Card = ({ coffee }) => {
 
                     </div>
                 </div>
-                </Link>
+
+
+            </Link>
+
+
+
 
 
         </div>

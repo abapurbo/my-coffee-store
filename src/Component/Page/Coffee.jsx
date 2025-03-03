@@ -1,15 +1,14 @@
-// import { NavLink} from "react-router-dom";
-
-import { Link } from "react-router-dom";
+import { Link} from "react-router-dom";
 
 
 const Coffee = ({ coffee}) => {
 
     const { id, image, name, popularity, rating, origin, type, category } =coffee
+ 
     return (
         <div>
         
-           <Link to={`/coffees/${id}`}  className="card transition hover:scale-105 bg-base-100 w-96 shadow-sm">
+           <Link to={`/details/${id}`}  className="card transition hover:scale-105 bg-base-100 w-96 shadow-sm">
                 <figure>
                     <img className="h-[230px] w-full bg-center object-center"
                         src={image}

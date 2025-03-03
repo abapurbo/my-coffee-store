@@ -18,6 +18,9 @@ const Coffees = () => {
             const ratingSort=[...datas].sort((a,b)=>a.rating-b.rating);
             setCoffees(ratingSort)
         }
+        else{
+            setCoffees(datas)
+        }
     }
   
     return (
@@ -37,7 +40,7 @@ const Coffees = () => {
 
                 {
 
-                    coffees.map(coffee => <Coffee key={coffee.id} coffee={coffee}></Coffee>)
+                    coffees.map(coffee =>( <Coffee key={coffee.id} coffee={coffee}></Coffee>))
                 }
             </div>
         </div>

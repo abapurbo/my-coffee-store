@@ -10,8 +10,9 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-// import ErrorPage from './Component/Page/ErrorPage.jsx'
 import CoffeeDetails from './Component/Page/CoffeeDetails.jsx'
+// import ErrorPage from './Component/Page/ErrorPage.jsx'
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -40,17 +41,14 @@ const router = createBrowserRouter([
         loader:()=>fetch('../coffees.json'),
         element: <Coffees></Coffees>
       },
-      // {
-      //   path:'/coffee/:id',
-      //   loader:()=>fetch('../coffees.json'),
-      //   element:<CoffeeDetails></CoffeeDetails>,
-      // },
       {
-        path:'coffee/:id',
+        path:'/details/:id',
+        loader:()=>fetch('../coffees.json'),
         element:<CoffeeDetails></CoffeeDetails>
       },
       {
         path: 'dashboard',
+        loader:()=>fetch('../coffees.json'),
         element: <DashBoard></DashBoard>
       }
 
